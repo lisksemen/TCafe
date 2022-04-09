@@ -1,0 +1,7 @@
+# README
+
+<h3>Linux installation (Ubuntu, Debian):</h3>
+>apt install ruby && git clone https://github.com/lisksemen/TCafe
+
+
+<h3>To run this app after cloning the repo you will need to copy config/database_example.yml file to the config/database.yml

@@ -1,27 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### LInux installation (Debian, Ubuntu):
+``apt install ruby && git clone https://github.com/lisksemen/TCafe``
 
-Things you may want to cover:
+### To run this app after cloning the repo you will need to copy 
+### config/database_example.yml file to the comfig/database.yml by:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-To run this app after cloning the repo you will need to copy 
-config/database_example.yml file to the comfig/database.yml
