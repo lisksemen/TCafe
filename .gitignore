@@ -32,3 +32,4 @@
 
 # Mainly added ignores
 /config/database.yml
+push.sh
