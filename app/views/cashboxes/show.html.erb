@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cashbox %>
+
+<div>
+  <%= link_to "Edit this cashbox", edit_cashbox_path(@cashbox) %> |
+  <%= link_to "Back to cashboxes", cashboxes_path %>
+
+  <%= button_to "Destroy this cashbox", @cashbox, method: :delete %>
+</div>

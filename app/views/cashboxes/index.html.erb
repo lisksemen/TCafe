@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cashboxes</h1>
+
+<div id="cashboxes">
+  <% @cashboxes.each do |cashbox| %>
+    <%= render cashbox %>
+    <p>
+      <%= link_to "Show this cashbox", cashbox %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New cashbox", new_cashbox_path %>
