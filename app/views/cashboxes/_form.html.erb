@@ -1,0 +1,22 @@
+<%= form_with(model: cashbox) do |form| %>
+  <% if cashbox.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cashbox.errors.count, "error") %> prohibited this cashbox from being saved:</h2>
+
+      <ul>
+        <% cashbox.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :money, style: "display: block" %>
+    <%= form.number_field :money %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
