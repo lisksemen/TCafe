@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe "barmen/new", type: :view do
   before(:each) do
     assign(:barman, Barman.new(
-      name: "MyString"
+      name: "MyString",
+      age: 12,
+      salary: 8
     ))
   end
 
