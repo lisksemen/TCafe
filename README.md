@@ -1,8 +1,10 @@
 # README
 
-### LInux installation (Debian, Ubuntu):
-``apt install ruby && git clone https://github.com/lisksemen/TCafe``
+### Linux installation (Debian, Ubuntu):
+``apt install ruby postgresql nodejs yarn -y && git clone https://github.com/lisksemen/TCafe && cd TCafe``
+``bundle install``
 
 ### To run this app after cloning the repo you will need to copy 
-### config/database_example.yml file to the comfig/database.yml by:
+### config/database_example.yml file to the config/database.yml by:
+``cp config/database_example.yml config/database.yml``
 
