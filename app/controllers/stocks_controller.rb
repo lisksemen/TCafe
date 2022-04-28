@@ -21,11 +21,7 @@ class StocksController < ApplicationController
 
   # POST /stocks or /stocks.json
   def create
-    stock_parameters = Hash.new
-    params['stock'].each do |key, value|
-      stock_parameters[key] = value
-    end 
-    @stock = Stock.new(stock_parameters)
+    @stock = Stock.new(stock_params)
 
     respond_to do |format|
       if @stock.save
@@ -69,6 +65,6 @@ class StocksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def stock_params
-      params.require(:stock).permit(:brownie, :donut, :milk, :coffee, :sugar)
+      params.require(:stock).permit(:brownies, :donuts, :milk, :coffee, :sugar)
     end
 end
