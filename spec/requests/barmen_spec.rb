@@ -18,11 +18,11 @@ RSpec.describe "/barmen", type: :request do
   # Barman. As you add validations to Barman, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    Hash[name: "John", salary: 1000, age: 25]
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {name: '', age: 2, salary: -2}
   }
 
   describe "GET /index" do
@@ -79,7 +79,7 @@ RSpec.describe "/barmen", type: :request do
 
       it "renders a successful response (i.e. to display the 'new' template)" do
         post barmen_url, params: { barman: invalid_attributes }
-        expect(response).to be_successful
+        expect(response).to have_http_status(422)
       end
     end
   end
@@ -109,7 +109,7 @@ RSpec.describe "/barmen", type: :request do
       it "renders a successful response (i.e. to display the 'edit' template)" do
         barman = Barman.create! valid_attributes
         patch barman_url(barman), params: { barman: invalid_attributes }
-        expect(response).to be_successful
+        expect(response).to have_http_status(422)
       end
     end
   end

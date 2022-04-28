@@ -60,11 +60,11 @@ class BarmenController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_barman
-      @barman = Barman.find(params[:id])
+      @barman = Barman.find(params.permit(:id)[:id].to_i)
     end
 
     # Only allow a list of trusted parameters through.
     def barman_params
-      params.require(:barman).permit(:name)
+      params.require(:barman).permit(:name, :salary, :age)
     end
 end

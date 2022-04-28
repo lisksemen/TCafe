@@ -5,12 +5,12 @@ RSpec.describe "barmen/index", type: :view do
     assign(:barmen, [
       Barman.create!(
         name: "MyString",
-        age: 12,
+        age: 19,
         salary: 8
       ),
       Barman.create!(
         name: "MyString",
-        age: 12,
+        age: 19,
         salary: 8
       )
     ])

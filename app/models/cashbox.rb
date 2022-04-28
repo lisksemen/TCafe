@@ -5,5 +5,4 @@ class Cashbox < ApplicationRecord
     def to_s
         return "Cashbox amount: " + money.to_s
     end
-    has_and_belongs_to_many :barmen
 end
