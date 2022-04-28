@@ -21,7 +21,11 @@ class StocksController < ApplicationController
 
   # POST /stocks or /stocks.json
   def create
-    @stock = Stock.new(stock_params)
+    stock_parameters = Hash.new
+    params['stock'].each do |key, value|
+      stock_parameters[key] = value
+    end 
+    @stock = Stock.new(stock_parameters)
 
     respond_to do |format|
       if @stock.save

@@ -4,7 +4,7 @@ RSpec.describe "barmen/new", type: :view do
   before(:each) do
     assign(:barman, Barman.new(
       name: "MyString",
-      age: 12,
+      age: 19,
       salary: 8
     ))
   end

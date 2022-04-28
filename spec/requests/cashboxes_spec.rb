@@ -18,11 +18,11 @@ RSpec.describe "/cashboxes", type: :request do
   # Cashbox. As you add validations to Cashbox, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {money: 15}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {money: nil}
   }
 
   describe "GET /index" do

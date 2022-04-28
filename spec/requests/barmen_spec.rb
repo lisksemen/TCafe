@@ -18,11 +18,11 @@ RSpec.describe "/barmen", type: :request do
   # Barman. As you add validations to Barman, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    Hash[name: "John", salary: 1000, age: 25]
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {name: '', age: 2, salary: -2}
   }
 
   describe "GET /index" do

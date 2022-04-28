@@ -18,11 +18,11 @@ RSpec.describe "/stocks", type: :request do
   # Stock. As you add validations to Stock, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {brownies: 13, donuts: 2, milk: 2.3, sugar: 4.5, coffee: 3.3}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {brownies: -1, donuts: nil, milk: nil, sugar: -0.001, coffee: nil}
   }
 
   describe "GET /index" do
