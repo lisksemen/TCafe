@@ -79,7 +79,7 @@ RSpec.describe "/stocks", type: :request do
 
       it "renders a successful response (i.e. to display the 'new' template)" do
         post stocks_url, params: { stock: invalid_attributes }
-        expect(response).to be_successful
+        expect(response).to have_http_status(422)
       end
     end
   end
@@ -109,7 +109,7 @@ RSpec.describe "/stocks", type: :request do
       it "renders a successful response (i.e. to display the 'edit' template)" do
         stock = Stock.create! valid_attributes
         patch stock_url(stock), params: { stock: invalid_attributes }
-        expect(response).to be_successful
+        expect(response).to have_http_status(422)
       end
     end
   end

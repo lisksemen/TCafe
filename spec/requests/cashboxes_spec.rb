@@ -79,7 +79,7 @@ RSpec.describe "/cashboxes", type: :request do
 
       it "renders a successful response (i.e. to display the 'new' template)" do
         post cashboxes_url, params: { cashbox: invalid_attributes }
-        expect(response).to be_successful
+        expect(response).to have_http_status(422)
       end
     end
   end
@@ -109,7 +109,7 @@ RSpec.describe "/cashboxes", type: :request do
       it "renders a successful response (i.e. to display the 'edit' template)" do
         cashbox = Cashbox.create! valid_attributes
         patch cashbox_url(cashbox), params: { cashbox: invalid_attributes }
-        expect(response).to be_successful
+        expect(response).to have_http_status(422)
       end
     end
   end
