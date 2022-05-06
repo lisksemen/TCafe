@@ -33,3 +33,10 @@
 # Mainly added ignores
 /config/database.yml
 push.sh
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

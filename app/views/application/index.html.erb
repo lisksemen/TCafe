@@ -1,0 +1,8 @@
+<% @barmen = Barman.all%>
+<%= render partial: 'barmen/index', object: @barmen %>
+
+<% @stocks = Stock.all%>
+<%= render partial: 'stocks/index', object: @stocks %>
+
+<% @cashboxes = Cashbox.all%>
+<%= render partial: 'cashboxes/index', object: @cashboxes %>

@@ -1,20 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe "barmen/new", type: :view do
-  before(:each) do
-    assign(:barman, Barman.new(
-      name: "MyString",
-      age: 19,
-      salary: 8
-    ))
-  end
+describe "barmen/new.html.erb" do
+  let(:valid_barman_params) {{name: "Alex", salary: 300, age: 24}}
+  let(:valid_barman) {FactoryBot.create(:barman, valid_barman_params)}
 
-  it "renders new barman form" do
-    render
+  it "shows new barman params" do
+    @barman = Barman.create(valid_barman_params)
+    
+    render 'show'
 
-    assert_select "form[action=?][method=?]", barmen_path, "post" do
-
-      assert_select "input[name=?]", "barman[name]"
-    end
+    expect(rendered).to match valid_barman.name
+    expect(rendered).to match valid_barman.salary.to_s
+    expect(rendered).to match valid_barman.age.to_s
   end
 end
