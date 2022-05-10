@@ -21,6 +21,7 @@ class StocksController < ApplicationController
 
   # POST /stocks or /stocks.json
   def create
+
     @stock = Stock.new(stock_params)
 
     respond_to do |format|
