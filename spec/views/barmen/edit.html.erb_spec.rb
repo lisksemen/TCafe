@@ -1,12 +1,17 @@
 require 'rails_helper'
 
-RSpec.describe "barmen/edit", type: :view do
-  before(:each) do
-    @barman = assign(:barman, Barman.create!(
-      name: "MyString",
-      age: 19,
-      salary: 8
-    ))
+describe "barmen/edit.html.erb" do
+  let(:valid_barman_params) {{name: "Alex", salary: 300, age: 24}}
+  let(:valid_barman) {FactoryBot.create(:barman, valid_barman_params)}
+
+
+  it "shows links" do
+    @barman = Barman.create(valid_barman_params)
+
+    render 'edit'
+    
+    expect(rendered).to match 'Show'
+    expect(rendered).to match 'Back'
   end
 
 end
